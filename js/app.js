@@ -9,7 +9,10 @@ var ViewModel = function() {
     this.level = ko.computed(function(){
         return this.clickCount() < 10 ? 'new born' : 'experienced cat';
     },this);
-    
+    this.catnicknames = ko.observableArray([
+        {nickname: "Mauntzi 1"},
+        {nickname: "Mauntzi 2"},
+        {nickname: "Mauntzi 3"}]);
 }
 
 ko.applyBindings(new ViewModel());
